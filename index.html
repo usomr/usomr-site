@@ -1,213 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b0b0b">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0b" />
 
-<title>U.S. Oil Meme Reserve ($USOMR)</title>
-<meta name="description" content="U.S. Oil Meme Reserve — a premium macro-driven memecoin on Solana.">
+  <title>U.S. Oil Meme Reserve ($USOMR)</title>
+  <meta name="description" content="U.S. Oil Meme Reserve ($USOMR) is a satirical macro-meme inspired by global energy panic, trade wars, and internet geopolitics." />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --bg:#0b0b0b;
-  --bg2:#111;
-  --text:#f1f1f1;
-  --muted:#a9a9a9;
-
-  --gold:#d4af37;
-  --gold2:#f6d36b;
-  --goldLine:rgba(212,175,55,.35);
-  --goldGlow:rgba(212,175,55,.22);
-
-  --radius:18px;
-  --shadow:0 20px 60px rgba(0,0,0,.55);
-  --max:1180px;
-}
-
-*{box-sizing:border-box}
-html,body{margin:0;height:100%}
-body{
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  background:
-    radial-gradient(900px 500px at 15% 5%, rgba(212,175,55,.10), transparent 60%),
-    radial-gradient(800px 500px at 85% 10%, rgba(246,211,107,.06), transparent 60%),
-    linear-gradient(180deg,#0b0b0b,#060606);
-  color:var(--text);
-}
-
-a{color:var(--gold);text-decoration:none}
-a:hover{color:var(--gold2)}
-
-.container{
-  width:min(var(--max),calc(100% - 40px));
-  margin:0 auto;
-}
-
-.hr{
-  height:1px;
-  background:linear-gradient(90deg,transparent,var(--goldLine),transparent);
-  margin:28px 0;
-}
-
-/* Topbar */
-.topbar{
-  position:sticky;top:0;z-index:10;
-  background:rgba(11,11,11,.7);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(212,175,55,.15);
-}
-.topbar .inner{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:14px 0;
-}
-.brand{
-  display:flex;align-items:center;gap:14px;
-}
-.brand img{
-  width:42px;height:42px;border-radius:12px;
-  border:1px solid rgba(212,175,55,.3);
-  box-shadow:0 0 0 1px rgba(212,175,55,.1) inset;
-}
-.brand-name{
-  font-family:"Playfair Display",serif;
-  font-weight:700;
-  letter-spacing:.3px;
-}
-.brand-ticker{
-  font-size:12px;color:var(--muted);
-}
-
-.nav a{
-  padding:9px 14px;
-  border-radius:999px;
-  border:1px solid rgba(212,175,55,.25);
-  background:rgba(0,0,0,.3);
-  font-size:14px;
-  font-weight:600;
-}
-.nav a:hover{
-  box-shadow:0 0 20px rgba(212,175,55,.18);
-}
-
-/* Cards */
-.card{
-  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.015));
-  border:1px solid rgba(212,175,55,.22);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  position:relative;
-  overflow:hidden;
-}
-.card::before{
-  content:"";
-  position:absolute;inset:-1px;
-  background:radial-gradient(600px 260px at 30% 0%,rgba(212,175,55,.18),transparent 60%);
-  pointer-events:none;
-}
-.card-inner{position:relative;padding:26px}
-
-/* Hero */
-.hero{
-  padding:56px 0 24px;
-}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.25fr .75fr;
-  gap:24px;
-}
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr}
-}
-
-.title{
-  font-family:"Playfair Display",serif;
-  font-size:44px;
-  line-height:1.05;
-  margin:0 0 14px;
-}
-.subtitle{
-  color:var(--muted);
-  font-size:16px;
-  line-height:1.6;
-  max-width:60ch;
-}
-
-.pill{
-  display:inline-block;
-  padding:8px 14px;
-  border-radius:999px;
-  border:1px solid rgba(212,175,55,.3);
-  background:rgba(0,0,0,.35);
-  font-size:13px;
-  margin-bottom:16px;
-}
-
-.cta{
-  display:flex;gap:14px;flex-wrap:wrap;
-}
-.btn{
-  padding:12px 18px;
-  border-radius:999px;
-  border:1px solid rgba(212,175,55,.35);
-  background:rgba(0,0,0,.35);
-  font-weight:600;
-}
-.btn.primary{
-  color:var(--gold2);
-  background:linear-gradient(135deg,rgba(212,175,55,.25),rgba(0,0,0,.4));
-}
-
-/* Banner */
-.banner{
-  height:360px;
-  border-radius:16px;
-  border:1px solid rgba(212,175,55,.25);
-  overflow:hidden;
-}
-.banner img{
-  width:100%;height:100%;
-  object-fit:cover;
-  filter:saturate(1.05) contrast(1.05);
-}
-
-/* Chart */
-.chart-frame{
-  height:560px;
-  border-radius:16px;
-  border:1px solid rgba(212,175,55,.25);
-  background:rgba(0,0,0,.35);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:40px;
-}
-.chart-frame h3{
-  font-family:"Playfair Display",serif;
-  font-size:24px;
-  margin-bottom:10px;
-}
-.chart-frame p{
-  color:var(--muted);
-  max-width:520px;
-  margin:0 auto;
-}
-
-/* Footer */
-footer{
-  margin-top:60px;
-  padding:30px 0;
-  border-top:1px solid rgba(212,175,55,.15);
-  color:var(--muted);
-  font-size:13px;
-  text-align:center;
-}
-</style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -222,61 +27,94 @@ footer{
         <div class="brand-ticker">$USOMR • Solana</div>
       </div>
     </div>
-    <div class="nav">
-      <a href="https://x.com/USOMReserve" target="_blank">X</a>
-    </div>
+
+    <a class="x-link" href="https://x.com/USOMReserve" target="_blank" aria-label="X">
+      <svg viewBox="0 0 24 24">
+        <path d="M18.146 2H21.49l-7.3 8.35L22.78 22h-6.72l-5.26-6.88L4.77 22H1.42l7.8-8.93L1 2h6.89l4.76 6.29L18.146 2zm-1.18 18h1.85L7.86 3.9H5.87L16.966 20z"/>
+      </svg>
+      <span>X</span>
+    </a>
   </div>
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<header class="hero reveal">
   <div class="container hero-grid">
 
-    <div class="card">
+    <section class="card lift">
       <div class="card-inner">
         <div class="pill">Macro Panic • Meme Reserve</div>
-        <h1 class="title">When oil burns,<br>memes print.</h1>
+
+        <h1 class="title">
+          U.S. Oil Meme Reserve
+          <span class="title-sub">($USOMR)</span>
+        </h1>
+
         <p class="subtitle">
-          U.S. Oil Meme Reserve ($USOMR) is a macro-themed memecoin inspired by
-          geopolitical tension, energy markets and global chaos.
-          No utility. No promises. Pure narrative.
+          U.S. Oil Meme Reserve ($USOMR) is a satirical macro-meme inspired by
+          global energy panic, trade wars, and internet geopolitics.
         </p>
 
         <div class="hr"></div>
 
         <div class="cta">
           <a class="btn primary" href="https://x.com/USOMReserve" target="_blank">Follow on X</a>
+          <a class="btn" href="#chart">Chart</a>
+          <a class="btn" href="#ca">CA</a>
         </div>
-      </div>
-    </div>
 
-    <div class="card">
+        <p class="tiny-note">High risk. No promises. DYOR.</p>
+      </div>
+    </section>
+
+    <section class="card lift">
       <div class="card-inner">
-        <div class="banner">
+        <div class="banner banner-contain">
           <img src="banner.png" alt="USOMR Banner">
         </div>
       </div>
-    </div>
+    </section>
 
+  </div>
+</header>
+
+<!-- CHART -->
+<section id="chart" class="section reveal">
+  <div class="container">
+    <div class="card lift">
+      <div class="card-inner">
+        <h2 class="h2">Live Chart</h2>
+        <p class="muted">DexScreener chart will appear here once liquidity goes live.</p>
+
+        <div class="hr"></div>
+
+        <div class="chart-frame">
+          <div class="chart-placeholder">
+            <div class="badge">⏳ Waiting for DexScreener</div>
+            <h3>Chart ready</h3>
+            <p>Live chart will be embedded here after launch.</p>
+          </div>
+
+          <!-- PODMIENIMY NA IFRAME, GDY BĘDZIESZ MIAŁ LINK -->
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CHART -->
-<section class="container">
-  <div class="card">
-    <div class="card-inner">
-      <h2 class="title" style="font-size:32px">Live Chart</h2>
-      <p class="subtitle">DexScreener chart will appear here once liquidity goes live.</p>
+<!-- CA -->
+<section id="ca" class="section reveal">
+  <div class="container">
+    <div class="card lift">
+      <div class="card-inner">
+        <h2 class="h2">Contract Address</h2>
+        <p class="muted">Official contract address on Solana.</p>
 
-      <div class="hr"></div>
+        <div class="hr"></div>
 
-      <div class="chart-frame">
-        <div>
-          <h3>Chart loading soon</h3>
-          <p>
-            Liquidity not live yet.<br>
-            This window will automatically host the DexScreener chart after launch.
-          </p>
+        <div class="ca-box">
+          <code id="ca-text">PASTE_CONTRACT_ADDRESS_HERE</code>
+          <button class="copy-btn" onclick="copyCA()">Copy</button>
         </div>
       </div>
     </div>
@@ -284,11 +122,17 @@ footer{
 </section>
 
 <footer>
-  © <span id="y"></span> U.S. Oil Meme Reserve • High risk • DYOR
+  © <span id="year"></span> U.S. Oil Meme Reserve • DYOR
 </footer>
 
 <script>
-document.getElementById("y").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function copyCA(){
+  const ca = document.getElementById("ca-text").innerText;
+  navigator.clipboard.writeText(ca);
+  alert("Contract address copied");
+}
 </script>
 
 </body>
