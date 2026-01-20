@@ -1,463 +1,295 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0b0b0b" />
-  <title>YOUR TOKEN — Premium Landing</title>
-  <meta name="description" content="A premium black & gold landing page for your Solana token." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0b0b">
 
-  <!-- Optional: nicer fonts (recommended) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<title>U.S. Oil Meme Reserve ($USOMR)</title>
+<meta name="description" content="U.S. Oil Meme Reserve — a premium macro-driven memecoin on Solana.">
 
-  <style>
-    :root{
-      --bg:#0b0b0b;
-      --bg2:#101010;
-      --card:#0f0f0f;
-      --text:#eaeaea;
-      --muted:#a8a8a8;
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-      --gold:#d4af37;
-      --gold2:#f6d36b;
-      --goldLine:rgba(212,175,55,.35);
-      --goldGlow:rgba(212,175,55,.22);
+<style>
+:root{
+  --bg:#0b0b0b;
+  --bg2:#111;
+  --text:#f1f1f1;
+  --muted:#a9a9a9;
 
-      --radius:18px;
-      --shadow: 0 18px 60px rgba(0,0,0,.55);
+  --gold:#d4af37;
+  --gold2:#f6d36b;
+  --goldLine:rgba(212,175,55,.35);
+  --goldGlow:rgba(212,175,55,.22);
 
-      --max:1120px;
-    }
+  --radius:18px;
+  --shadow:0 20px 60px rgba(0,0,0,.55);
+  --max:1180px;
+}
 
-    *{box-sizing:border-box;}
-    html,body{height:100%;}
-    body{
-      margin:0;
-      background:
-        radial-gradient(900px 500px at 20% 10%, rgba(212,175,55,.08), transparent 60%),
-        radial-gradient(700px 420px at 80% 20%, rgba(246,211,107,.05), transparent 55%),
-        linear-gradient(180deg, var(--bg), #070707);
-      color:var(--text);
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: geometricPrecision;
-    }
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:
+    radial-gradient(900px 500px at 15% 5%, rgba(212,175,55,.10), transparent 60%),
+    radial-gradient(800px 500px at 85% 10%, rgba(246,211,107,.06), transparent 60%),
+    linear-gradient(180deg,#0b0b0b,#060606);
+  color:var(--text);
+}
 
-    a{color:var(--gold); text-decoration:none;}
-    a:hover{color:var(--gold2);}
+a{color:var(--gold);text-decoration:none}
+a:hover{color:var(--gold2)}
 
-    .container{
-      width:min(var(--max), calc(100% - 40px));
-      margin:0 auto;
-    }
+.container{
+  width:min(var(--max),calc(100% - 40px));
+  margin:0 auto;
+}
 
-    /* Top bar */
-    .topbar{
-      position:sticky; top:0; z-index:10;
-      backdrop-filter: blur(10px);
-      background: rgba(11,11,11,.72);
-      border-bottom: 1px solid rgba(212,175,55,.12);
-    }
-    .topbar .inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:16px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      min-width: 220px;
-    }
-    .brand img{
-      width:36px; height:36px; border-radius:10px;
-      border:1px solid rgba(212,175,55,.25);
-      box-shadow: 0 0 0 1px rgba(212,175,55,.08) inset;
-      object-fit:cover;
-    }
-    .brand .name{
-      font-family: 'Playfair Display', ui-serif, Georgia, serif;
-      font-weight:700;
-      letter-spacing:.3px;
-      line-height:1.1;
-    }
-    .brand .ticker{
-      font-size:12px; color:var(--muted);
-      margin-top:2px;
-    }
+.hr{
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--goldLine),transparent);
+  margin:28px 0;
+}
 
-    .nav{
-      display:flex; align-items:center; gap:14px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    .nav a{
-      font-size:13px;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid rgba(212,175,55,.16);
-      background: rgba(0,0,0,.25);
-      transition: transform .18s ease, border-color .18s ease;
-    }
-    .nav a:hover{
-      transform: translateY(-1px);
-      border-color: rgba(212,175,55,.32);
-    }
+/* Topbar */
+.topbar{
+  position:sticky;top:0;z-index:10;
+  background:rgba(11,11,11,.7);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(212,175,55,.15);
+}
+.topbar .inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;
+}
+.brand{
+  display:flex;align-items:center;gap:14px;
+}
+.brand img{
+  width:42px;height:42px;border-radius:12px;
+  border:1px solid rgba(212,175,55,.3);
+  box-shadow:0 0 0 1px rgba(212,175,55,.1) inset;
+}
+.brand-name{
+  font-family:"Playfair Display",serif;
+  font-weight:700;
+  letter-spacing:.3px;
+}
+.brand-ticker{
+  font-size:12px;color:var(--muted);
+}
 
-    /* Hero */
-    .hero{
-      padding:56px 0 18px;
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap:22px;
-      align-items:stretch;
-    }
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns:1fr; }
-    }
+.nav a{
+  padding:9px 14px;
+  border-radius:999px;
+  border:1px solid rgba(212,175,55,.25);
+  background:rgba(0,0,0,.3);
+  font-size:14px;
+  font-weight:600;
+}
+.nav a:hover{
+  box-shadow:0 0 20px rgba(212,175,55,.18);
+}
 
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
-      border: 1px solid rgba(212,175,55,.22);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      position:relative;
-      overflow:hidden;
-    }
-    .card::before{
-      content:"";
-      position:absolute; inset:-1px;
-      background: radial-gradient(600px 240px at 30% 0%, rgba(212,175,55,.16), transparent 60%);
-      pointer-events:none;
-    }
-    .card-inner{ position:relative; padding:22px; }
+/* Cards */
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.015));
+  border:1px solid rgba(212,175,55,.22);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+.card::before{
+  content:"";
+  position:absolute;inset:-1px;
+  background:radial-gradient(600px 260px at 30% 0%,rgba(212,175,55,.18),transparent 60%);
+  pointer-events:none;
+}
+.card-inner{position:relative;padding:26px}
 
-    .title{
-      font-family: 'Playfair Display', ui-serif, Georgia, serif;
-      font-size:42px;
-      line-height:1.08;
-      letter-spacing:.2px;
-      margin:0 0 10px;
-    }
-    @media (max-width: 480px){
-      .title{font-size:34px;}
-    }
-    .subtitle{
-      margin:0 0 18px;
-      color:var(--muted);
-      font-size:15px;
-      line-height:1.6;
-      max-width: 62ch;
-    }
+/* Hero */
+.hero{
+  padding:56px 0 24px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:24px;
+}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+}
 
-    .cta-row{
-      display:flex; gap:12px; flex-wrap:wrap;
-      margin-top:16px;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:11px 14px;
-      border-radius:999px;
-      border:1px solid rgba(212,175,55,.25);
-      background: rgba(0,0,0,.25);
-      color: var(--text);
-      font-weight:600;
-      font-size:14px;
-      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      border-color: rgba(212,175,55,.45);
-      box-shadow: 0 0 20px rgba(212,175,55,.10);
-    }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(212,175,55,.20), rgba(0,0,0,.30));
-      border-color: rgba(212,175,55,.40);
-      color: var(--gold2);
-    }
+.title{
+  font-family:"Playfair Display",serif;
+  font-size:44px;
+  line-height:1.05;
+  margin:0 0 14px;
+}
+.subtitle{
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.6;
+  max-width:60ch;
+}
 
-    .pill{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(212,175,55,.18);
-      background: rgba(0,0,0,.28);
-      color: var(--muted);
-      font-size:13px;
-      margin-bottom:12px;
-      width: fit-content;
-    }
-    .pill strong{ color: var(--gold2); font-weight:700; }
+.pill{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:999px;
+  border:1px solid rgba(212,175,55,.3);
+  background:rgba(0,0,0,.35);
+  font-size:13px;
+  margin-bottom:16px;
+}
 
-    .banner{
-      width:100%;
-      height: 320px;
-      border-radius: 16px;
-      border:1px solid rgba(212,175,55,.22);
-      background: rgba(0,0,0,.35);
-      overflow:hidden;
-      position:relative;
-      box-shadow: 0 0 0 1px rgba(212,175,55,.08) inset;
-    }
-    .banner img{
-      width:100%;
-      height:100%;
-      object-fit: cover;
-      display:block;
-      filter: saturate(1.05) contrast(1.05);
-    }
-    .banner::after{
-      content:"";
-      position:absolute; inset:0;
-      background: radial-gradient(900px 420px at 50% 0%, rgba(212,175,55,.18), transparent 60%);
-      pointer-events:none;
-    }
+.cta{
+  display:flex;gap:14px;flex-wrap:wrap;
+}
+.btn{
+  padding:12px 18px;
+  border-radius:999px;
+  border:1px solid rgba(212,175,55,.35);
+  background:rgba(0,0,0,.35);
+  font-weight:600;
+}
+.btn.primary{
+  color:var(--gold2);
+  background:linear-gradient(135deg,rgba(212,175,55,.25),rgba(0,0,0,.4));
+}
 
-    /* Gold hairline separator */
-    .hr-gold{
-      height:1px;
-      background: linear-gradient(90deg, transparent, var(--goldLine), transparent);
-      margin:24px 0;
-    }
+/* Banner */
+.banner{
+  height:360px;
+  border-radius:16px;
+  border:1px solid rgba(212,175,55,.25);
+  overflow:hidden;
+}
+.banner img{
+  width:100%;height:100%;
+  object-fit:cover;
+  filter:saturate(1.05) contrast(1.05);
+}
 
-    /* Feature grid */
-    .grid3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-    }
-    @media (max-width: 900px){
-      .grid3{grid-template-columns:1fr;}
-    }
-    .h-title{
-      font-family: 'Playfair Display', ui-serif, Georgia, serif;
-      letter-spacing:.3px;
-      font-weight:700;
-      margin:0 0 6px;
-      color: var(--gold2);
-    }
-    .h-sub{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.55;
-    }
+/* Chart */
+.chart-frame{
+  height:560px;
+  border-radius:16px;
+  border:1px solid rgba(212,175,55,.25);
+  background:rgba(0,0,0,.35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px;
+}
+.chart-frame h3{
+  font-family:"Playfair Display",serif;
+  font-size:24px;
+  margin-bottom:10px;
+}
+.chart-frame p{
+  color:var(--muted);
+  max-width:520px;
+  margin:0 auto;
+}
 
-    /* Chart box */
-    .chart-wrap{
-      margin: 16px auto 34px;
-    }
-    .chart-frame{
-      width:100%;
-      height:560px;
-      border: 1px solid rgba(212,175,55,.22);
-      border-radius: 16px;
-      background: rgba(0,0,0,.35);
-      overflow:hidden;
-      position:relative;
-      box-shadow: 0 0 0 1px rgba(212,175,55,.08) inset, 0 12px 40px rgba(0,0,0,.55);
-    }
-    .chart-frame::after{
-      content:"";
-      position:absolute; inset:-2px;
-      border-radius: 18px;
-      background: radial-gradient(900px 420px at 50% 0%, var(--goldGlow), transparent 60%);
-      pointer-events:none;
-    }
-    .chart-iframe{
-      width:100%;
-      height:100%;
-      border:0;
-      display:block;
-    }
-    .chart-placeholder{
-      height:100%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex-direction:column;
-      gap:10px;
-      text-align:center;
-      padding:32px;
-      position:relative;
-      z-index:1;
-    }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(212,175,55,.25);
-      background: rgba(0,0,0,.35);
-      color: var(--gold2);
-      font-size:13px;
-    }
-    .placeholder-title{
-      font-family: 'Playfair Display', ui-serif, Georgia, serif;
-      margin:0;
-      font-size:22px;
-      color: var(--text);
-    }
-    .placeholder-text{
-      margin:0;
-      color: var(--muted);
-      max-width: 620px;
-      line-height:1.55;
-      font-size:14px;
-    }
-
-    /* Footer */
-    footer{
-      padding: 26px 0 40px;
-      color: var(--muted);
-      font-size:13px;
-    }
-    .footer-row{
-      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
-      border-top: 1px solid rgba(212,175,55,.12);
-      padding-top: 18px;
-    }
-    .small{font-size:12px; color: rgba(168,168,168,.9);}
-    code{
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      background: rgba(212,175,55,.08);
-      border: 1px solid rgba(212,175,55,.18);
-      padding: 2px 6px;
-      border-radius: 8px;
-      color: var(--gold2);
-    }
-  </style>
+/* Footer */
+footer{
+  margin-top:60px;
+  padding:30px 0;
+  border-top:1px solid rgba(212,175,55,.15);
+  color:var(--muted);
+  font-size:13px;
+  text-align:center;
+}
+</style>
 </head>
 
 <body>
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="container inner">
-      <div class="brand">
-        <!-- TODO: podmień na Twoje logo (zostaje to samo co masz) -->
-        <img src="assets/logo.png" alt="Logo">
-        <div>
-          <div class="name">YOUR TOKEN</div>
-          <div class="ticker">$TICKER • Solana</div>
-        </div>
-      </div>
 
-      <!-- TODO: tu wklej swoje TE SAME linki co masz teraz -->
-      <nav class="nav">
-        <a href="YOUR_TWITTER_LINK" target="_blank" rel="noopener">Twitter</a>
-        <a href="YOUR_TELEGRAM_LINK" target="_blank" rel="noopener">Telegram</a>
-        <a href="YOUR_DEX_LINK_LATER" target="_blank" rel="noopener">DexScreener</a>
-        <a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener">GitHub</a>
-      </nav>
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container inner">
+    <div class="brand">
+      <img src="logo.png" alt="USOMR Logo">
+      <div>
+        <div class="brand-name">U.S. Oil Meme Reserve</div>
+        <div class="brand-ticker">$USOMR • Solana</div>
+      </div>
+    </div>
+    <div class="nav">
+      <a href="https://x.com/USOMReserve" target="_blank">X</a>
     </div>
   </div>
+</div>
 
-  <!-- Hero -->
-  <header class="hero">
-    <div class="container hero-grid">
-      <div class="card">
-        <div class="card-inner">
-          <div class="pill">Launch: <strong>20.01.2026 • 18:00 UTC</strong></div>
-          <h1 class="title">Premium. Dark. Gold.</h1>
-          <p class="subtitle">
-            Replace this paragraph with your existing hero text (keep your message the same if you want).
-            This layout is designed to look premium without changing your images or links.
-          </p>
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
 
-          <div class="hr-gold"></div>
-
-          <p class="h-sub">
-            Contract (CA): <code>PASTE_CA_HERE_LATER</code>
-          </p>
-
-          <div class="cta-row">
-            <a class="btn primary" href="YOUR_DEX_LINK_LATER" target="_blank" rel="noopener">View Chart</a>
-            <a class="btn" href="YOUR_TWITTER_LINK" target="_blank" rel="noopener">Follow on Twitter</a>
-            <a class="btn" href="YOUR_TELEGRAM_LINK" target="_blank" rel="noopener">Join Telegram</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-inner">
-          <h2 class="h-title">Banner</h2>
-          <p class="h-sub">Your existing banner/image stays the same — only the style changes.</p>
-          <div style="height:12px"></div>
-
-          <!-- TODO: podmień na swój baner (ten sam plik co masz) -->
-          <div class="banner">
-            <img src="assets/banner.jpg" alt="Banner">
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Feature cards (optional, możesz zostawić lub usunąć) -->
-  <section class="container">
-    <div class="grid3">
-      <div class="card"><div class="card-inner">
-        <h3 class="h-title">Fixed Supply</h3>
-        <p class="h-sub">Mint authority revoked. No extra printing.</p>
-      </div></div>
-      <div class="card"><div class="card-inner">
-        <h3 class="h-title">No Freeze</h3>
-        <p class="h-sub">Freeze authority revoked. No blacklists.</p>
-      </div></div>
-      <div class="card"><div class="card-inner">
-        <h3 class="h-title">Fair Launch</h3>
-        <p class="h-sub">Liquidity added. Market decides.</p>
-      </div></div>
-    </div>
-  </section>
-
-  <!-- DexScreener embed window (placeholder now, iframe later) -->
-  <section class="container chart-wrap">
     <div class="card">
       <div class="card-inner">
-        <h2 class="h-title">Live Chart</h2>
-        <p class="h-sub">DexScreener chart will appear here once the pool is live.</p>
-        <div style="height:12px"></div>
+        <div class="pill">Macro Panic • Meme Reserve</div>
+        <h1 class="title">When oil burns,<br>memes print.</h1>
+        <p class="subtitle">
+          U.S. Oil Meme Reserve ($USOMR) is a macro-themed memecoin inspired by
+          geopolitical tension, energy markets and global chaos.
+          No utility. No promises. Pure narrative.
+        </p>
 
-        <div class="chart-frame" id="dexscreener-embed">
-          <!-- Placeholder now -->
-          <div class="chart-placeholder" id="chart-placeholder">
-            <div class="badge">⏳ Waiting for DexScreener link</div>
-            <h3 class="placeholder-title">Chart embedding is ready</h3>
-            <p class="placeholder-text">
-              When you have your DexScreener pair link, paste it into the iframe <code>src</code>
-              and remove this placeholder.
-            </p>
-          </div>
+        <div class="hr"></div>
 
-          <!-- Enable later: uncomment + paste DexScreener embed URL -->
-          <!--
-          <iframe
-            class="chart-iframe"
-            src="PASTE_DEXSCREENER_EMBED_URL_HERE"
-            loading="lazy"
-            referrerpolicy="no-referrer"
-            allow="clipboard-write; fullscreen"
-          ></iframe>
-          -->
+        <div class="cta">
+          <a class="btn primary" href="https://x.com/USOMReserve" target="_blank">Follow on X</a>
         </div>
       </div>
     </div>
-  </section>
 
-  <footer>
-    <div class="container footer-row">
-      <div class="small">© <span id="y"></span> YOUR TOKEN. All rights reserved.</div>
-      <div class="small">High risk. No promises. DYOR.</div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="banner">
+          <img src="banner.png" alt="USOMR Banner">
+        </div>
+      </div>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  </div>
+</section>
+
+<!-- CHART -->
+<section class="container">
+  <div class="card">
+    <div class="card-inner">
+      <h2 class="title" style="font-size:32px">Live Chart</h2>
+      <p class="subtitle">DexScreener chart will appear here once liquidity goes live.</p>
+
+      <div class="hr"></div>
+
+      <div class="chart-frame">
+        <div>
+          <h3>Chart loading soon</h3>
+          <p>
+            Liquidity not live yet.<br>
+            This window will automatically host the DexScreener chart after launch.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="y"></span> U.S. Oil Meme Reserve • High risk • DYOR
+</footer>
+
+<script>
+document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
-
