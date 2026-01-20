@@ -17,19 +17,19 @@
 
 <body>
 
-<!-- TOP BAR -->
+<!-- TOPBAR -->
 <div class="topbar">
-  <div class="container topbar-inner">
+  <div class="container inner">
     <div class="brand">
-      <img src="logo.png" alt="USOMR logo">
+      <img src="logo.png" alt="USOMR Logo">
       <div>
         <div class="brand-name">U.S. Oil Meme Reserve</div>
         <div class="brand-ticker">$USOMR • Solana</div>
       </div>
     </div>
 
-    <a class="x-link" href="https://x.com/USOMReserve" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24">
+    <a class="x-link" href="https://x.com/USOMReserve" target="_blank" rel="noopener" aria-label="Official X account">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M18.146 2H21.49l-7.3 8.35L22.78 22h-6.72l-5.26-6.88L4.77 22H1.42l7.8-8.93L1 2h6.89l4.76 6.29L18.146 2zm-1.18 18h1.85L7.86 3.9H5.87L16.966 20z"/>
       </svg>
       <span>Official account</span>
@@ -38,73 +38,83 @@
 </div>
 
 <!-- HERO -->
-<header class="hero">
+<header class="hero reveal">
   <div class="container hero-grid">
 
-    <div class="card">
-      <div class="pill">Macro Panic • Meme Reserve</div>
+    <section class="card lift">
+      <div class="card-inner">
+        <div class="pill">Macro Panic • Meme Reserve</div>
 
-      <h1>
-        U.S. Oil Meme Reserve
-        <span>($USOMR)</span>
-      </h1>
+        <h1 class="title">
+          U.S. Oil Meme Reserve
+          <span class="title-sub">($USOMR)</span>
+        </h1>
 
-      <p class="subtitle">
-        U.S. Oil Meme Reserve ($USOMR) is a satirical macro-meme inspired by
-        global energy panic, trade wars, and internet geopolitics.
-      </p>
+        <p class="subtitle">
+          U.S. Oil Meme Reserve ($USOMR) is a satirical macro-meme inspired by
+          global energy panic, trade wars, and internet geopolitics.
+        </p>
 
-      <div class="divider"></div>
+        <div class="hr"></div>
 
-      <div class="cta">
-        <a href="#chart">Chart</a>
-        <a href="#ca">CA</a>
+        <div class="cta">
+          <a class="btn" href="#chart">Chart</a>
+          <a class="btn" href="#ca">CA</a>
+        </div>
+
+        <p class="tiny-note">High risk. No promises. DYOR.</p>
       </div>
+    </section>
 
-      <p class="note">High risk. No promises. DYOR.</p>
-    </div>
-
-    <div class="card banner-card">
-      <img src="banner.png" alt="USOMR banner">
-    </div>
+    <section class="card lift">
+      <div class="card-inner">
+        <div class="banner banner-contain">
+          <img src="banner.png" alt="USOMR Banner">
+        </div>
+      </div>
+    </section>
 
   </div>
 </header>
 
 <!-- CHART -->
-<section id="chart" class="section">
+<section id="chart" class="section reveal">
   <div class="container">
-    <div class="card">
-      <h2>Live Chart</h2>
-      <p class="muted">DexScreener live chart.</p>
+    <div class="card lift">
+      <div class="card-inner">
+        <h2 class="h2">Live Chart</h2>
+        <p class="muted">DexScreener live chart.</p>
 
-      <div class="divider"></div>
+        <div class="hr"></div>
 
-      <div class="chart-frame">
-        <iframe
-          class="chart-iframe"
-          src="https://dexscreener.com/solana/dhwhzkijfwrgknkvlkv7desfhecvr7rfdx9cdjk3w8cu?embed=1&theme=dark"
-          loading="lazy"
-          referrerpolicy="no-referrer"
-          allow="clipboard-write; fullscreen">
-        </iframe>
+        <div class="chart-frame">
+          <iframe
+            class="chart-iframe"
+            src="https://dexscreener.com/solana/dhwhzkijfwrgknkvlkv7desfhecvr7rfdx9cdjk3w8cu?embed=1&theme=dark"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+            allow="clipboard-write; fullscreen"
+          ></iframe>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CA -->
-<section id="ca" class="section">
+<section id="ca" class="section reveal">
   <div class="container">
-    <div class="card">
-      <h2>Contract Address</h2>
-      <p class="muted">Official contract address on Solana.</p>
+    <div class="card lift">
+      <div class="card-inner">
+        <h2 class="h2">Contract Address</h2>
+        <p class="muted">Official contract address on Solana.</p>
 
-      <div class="divider"></div>
+        <div class="hr"></div>
 
-      <div class="ca-box">
-        <code id="ca">8AtYdfDBa1k3h572wvC2LzwaWJkdZwdENZQdFiw14C99</code>
-        <button onclick="copyCA()">Copy</button>
+        <div class="ca-box">
+          <code id="ca-text">8AtYdfDBa1k3h572wvC2LzwaWJkdZwdENZQdFiw14C99</code>
+          <button class="copy-btn" id="copy-btn" onclick="copyCA()">Copy</button>
+        </div>
       </div>
     </div>
   </div>
@@ -115,4 +125,19 @@
 </footer>
 
 <script>
-document.getElementById("year").textContent = new Date().getFul
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function copyCA(){
+  const ca = document.getElementById("ca-text").innerText.trim();
+  navigator.clipboard.writeText(ca).then(() => {
+    const btn = document.getElementById("copy-btn");
+    const old = btn.textContent;
+    btn.textContent = "Copied";
+    btn.disabled = true;
+    setTimeout(() => { btn.textContent = old; btn.disabled = false; }, 1200);
+  });
+}
+</script>
+
+</body>
+</html>
