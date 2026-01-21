@@ -1,4 +1,37 @@
+:root{
+  --bg:#0b0b0b;
+  --text:#f2f2f2;
+  --muted:#a9a9a9;
 
+  --gold:#d4af37;
+  --gold-soft:#f6d36b;
+  --gold-line:rgba(212,175,55,.35);
+
+  --radius:18px;
+  --shadow:0 20px 60px rgba(0,0,0,.55);
+  --shadow2:0 34px 90px rgba(0,0,0,.72);
+  --max:1180px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+
+body{
+  margin:0;
+  font-family:Inter,system-ui,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(900px 520px at 16% 6%, rgba(212,175,55,.12), transparent 60%),
+    radial-gradient(800px 520px at 86% 10%, rgba(246,211,107,.06), transparent 60%),
+    linear-gradient(180deg,#0b0b0b,#060606);
+}
+
+.container{
+  width:min(var(--max),calc(100% - 40px));
+  margin:0 auto;
+}
+
+a{color:var(--gold);text-decoration:none}
 a:hover{color:var(--gold-soft)}
 
 /* TOPBAR */
@@ -42,7 +75,16 @@ a:hover{color:var(--gold-soft)}
   color:var(--muted);
 }
 
-/* X LINK */
+/* NEW: right-side actions (WHITEPAPER + X) */
+.top-actions{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+/* shared pill-link style */
+.wp-link,
 .x-link{
   display:flex;
   gap:10px;
@@ -52,20 +94,27 @@ a:hover{color:var(--gold-soft)}
   border-radius:999px;
   background:rgba(0,0,0,.28);
   transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s cubic-bezier(.2,.8,.2,1), border-color .45s;
+  color:var(--text);
 }
 
+.wp-link svg,
 .x-link svg{
   width:16px;
   fill:var(--gold);
   transition: transform .45s cubic-bezier(.2,.8,.2,1);
 }
 
+.wp-link:hover,
 .x-link:hover{
   transform: translateY(-2px);
   border-color: rgba(212,175,55,.5);
   box-shadow: 0 0 0 1px rgba(212,175,55,.10) inset, 0 18px 45px rgba(212,175,55,.10);
 }
-.x-link:hover svg{ transform: rotate(-3deg) scale(1.02); }
+
+.wp-link:hover svg,
+.x-link:hover svg{
+  transform: rotate(-3deg) scale(1.02);
+}
 
 /* HERO */
 .hero{
@@ -241,7 +290,7 @@ a:hover{color:var(--gold-soft)}
 
 .muted{color:var(--muted); margin:0}
 
-/* ✅ DEX CHART FIX */
+/* DEX CHART FIX */
 .chart-frame{
   height:560px;
   border-radius:16px;
@@ -249,7 +298,7 @@ a:hover{color:var(--gold-soft)}
   overflow:hidden;
   background:#000;
   padding:0;
-  display:block; /* IMPORTANT: no flex centering */
+  display:block;
 }
 
 .chart-iframe{
@@ -305,16 +354,5 @@ footer{
 /* accessibility */
 @media (prefers-reduced-motion: reduce){
   .reveal, .card::after{ animation:none !important; }
-  .lift, .btn, .x-link, .copy-btn{ transition:none !important; }
-}
-.top-links{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
-
-.whitepaper-link .wp-icon{
-  font-size:16px;
-  line-height:1;
-  transform: translateY(-1px);
+  .lift, .btn, .x-link, .wp-link, .copy-btn{ transition:none !important; }
 }
