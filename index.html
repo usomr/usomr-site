@@ -29,16 +29,16 @@
     </div>
 
     <div class="top-actions">
-      <a class="wp-link" href="USOMR_Whitepaper.pdf" target="_blank" rel="noopener" aria-label="Whitepaper">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M6 2h8l4 4v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V7h3.5L14 3.5zM7 10h10v1.6H7V10zm0 3.2h10v1.6H7v-1.6zm0 3.2h7v1.6H7V16.4z"/>
+      <a class="wp-link" href="USOMR_Whitepaper.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24">
+          <path d="M6 2h8l4 4v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
         </svg>
         <span>WHITEPAPER</span>
       </a>
 
-      <a class="x-link" href="https://x.com/USOMReserve" target="_blank" rel="noopener" aria-label="Official X account">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M18.146 2H21.49l-7.3 8.35L22.78 22h-6.72l-5.26-6.88L4.77 22H1.42l7.8-8.93L1 2h6.89l4.76 6.29L18.146 2zm-1.18 18h1.85L7.86 3.9H5.87L16.966 20z"/>
+      <a class="x-link" href="https://x.com/USOMReserve" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24">
+          <path d="M18.146 2H21.49l-7.3 8.35L22.78 22h-6.72l-5.26-6.88L4.77 22H1.42l7.8-8.93L1 2h6.89l4.76 6.29z"/>
         </svg>
         <span>Official account</span>
       </a>
@@ -66,17 +66,21 @@
 
         <div class="hr"></div>
 
-        <p class="muted" style="margin: 0 0 10px 0;">Trade $USOMR here:</p>
+        <p class="muted" style="margin-bottom:10px;">Trade $USOMR here:</p>
 
         <div class="cta">
-          <span class="btn" style="filter: blur(4px); opacity:.75; pointer-events:none; user-select:none; display:flex; align-items:center; gap:8px;">
+          <!-- CoinGecko -->
+          <span class="btn"
+                style="opacity:.75; pointer-events:none; user-select:none; display:flex; align-items:center; gap:8px;">
             <img src="coingecko.svg" alt="CoinGecko" style="height:18px;">
-            CoinGecko
+            <span style="filter: blur(4px);">CoinGecko</span>
           </span>
 
-          <span class="btn" style="filter: blur(4px); opacity:.75; pointer-events:none; user-select:none; display:flex; align-items:center; gap:8px;">
+          <!-- CoinMarketCap -->
+          <span class="btn"
+                style="opacity:.75; pointer-events:none; user-select:none; display:flex; align-items:center; gap:8px;">
             <img src="coinmarketcap.svg" alt="CoinMarketCap" style="height:18px;">
-            CoinMarketCap
+            <span style="filter: blur(4px);">CoinMarketCap</span>
           </span>
         </div>
       </div>
@@ -100,17 +104,14 @@
       <div class="card-inner">
         <h2 class="h2">Live Chart</h2>
         <p class="muted">DexScreener live chart.</p>
-
         <div class="hr"></div>
-
         <div class="chart-frame">
           <iframe
             class="chart-iframe"
             src="https://dexscreener.com/solana/9YHDwkUZEacJRZJEQop1reJ6LveDGBg7xfo4HgibdL9e?embed=1&theme=dark"
             loading="lazy"
-            referrerpolicy="no-referrer"
-            allow="clipboard-write; fullscreen"
-          ></iframe>
+            allow="clipboard-write; fullscreen">
+          </iframe>
         </div>
       </div>
     </div>
@@ -124,12 +125,10 @@
       <div class="card-inner">
         <h2 class="h2">Contract Address</h2>
         <p class="muted">Official contract address on Solana.</p>
-
         <div class="hr"></div>
-
         <div class="ca-box">
           <code id="ca-text">9YHDwkUZEacJRZJEQop1reJ6LveDGBg7xfo4HgibdL9e</code>
-          <button class="copy-btn" id="copy-btn" onclick="copyCA()">Copy</button>
+          <button class="copy-btn" onclick="copyCA()">Copy</button>
         </div>
       </div>
     </div>
@@ -142,16 +141,9 @@
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
-
 function copyCA(){
   const ca = document.getElementById("ca-text").innerText.trim();
-  navigator.clipboard.writeText(ca).then(() => {
-    const btn = document.getElementById("copy-btn");
-    const old = btn.textContent;
-    btn.textContent = "Copied";
-    btn.disabled = true;
-    setTimeout(() => { btn.textContent = old; btn.disabled = false; }, 1200);
-  });
+  navigator.clipboard.writeText(ca);
 }
 </script>
 
